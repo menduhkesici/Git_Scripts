@@ -2,7 +2,7 @@
 git init 
 
 # Add remote 
-git remote add origin https://_@github.com/_/_.git 
+git remote add origin https://<token>@github.com/<username>/<repo>.git 
 
 # Check remote 
 git remote -v 
