@@ -19,6 +19,10 @@ read -n 1 -s -r -p "Process is over."
 # Change default branch name to main
 git config --global init.defaultBranch main
 
+# Add credentials
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+
 # Extract a file or a folder from a git repository with full git history
 # Create the patch file with all the commits that touch the file or folder.
 cd ~/repository_path
