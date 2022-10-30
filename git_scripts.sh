@@ -12,7 +12,7 @@ git remote remove origin
 
 # Commit all files
 git add .
-git commit -m "commit at `date +'%Y-%m-%d %H:%M'`"
+git commit -m "`date +'%Y-%m-%d %H:%M'`"
 git push -u origin main
 read -n 1 -s -r -p "Process is over."
 
@@ -39,7 +39,7 @@ echo $VAR
 git init
 git remote add origin $VAR
 git add .
-git commit -m "commit at `date +'%Y-%m-%d %H:%M'`"
+git commit -m "`date +'%Y-%m-%d %H:%M'`"
 git push -uf origin main
 
 # Check changes of a file
