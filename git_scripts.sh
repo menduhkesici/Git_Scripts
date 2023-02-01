@@ -41,11 +41,3 @@ git remote add origin $VAR
 git add .
 git commit -m "`date +'%Y-%m-%d %H:%M'`"
 git push -uf origin main
-
-# Check changes of a file
-git log -U0 --pretty=format:'=> %as' -- path/to/file \
-        | grep '^[+-=]' | grep -Ev '^(--- /dev/null|--- a/|\+\+\+ b/)' \
-        | GREP_COLOR='01;32' egrep --color=always '^\+.*|$' \
-        | GREP_COLOR='01;31' egrep --color=always '^-.*|$' \
-        | GREP_COLOR='01;37' egrep --color=always '^=>.*|$' \
-        | less -R
