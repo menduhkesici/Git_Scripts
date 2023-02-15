@@ -2,7 +2,8 @@
 git init
 
 # Add remote
-git remote add origin https://<token>@github.com/<username>/<repo>.git
+# Create PAT with permission: Contents (Read and write)
+git remote add origin https://<user ID>:<fine-grained PAT>@github.com/<owner>/<repo>.git
 
 # Check remote
 git remote -v
