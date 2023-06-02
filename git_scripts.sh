@@ -27,7 +27,7 @@ git config --global user.email "MY_NAME@example.com"
 # Extract a file or a folder from a git repository with full git history to another repository
 cd ~/repository_path
 git log --pretty=email --patch-with-stat --reverse --full-index --binary -- path/to/file_or_folder > /tmp/patch
-cd ~/another_repository_path
+cd ~/another_path
 git init
 git am < /tmp/patch
 
