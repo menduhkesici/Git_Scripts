@@ -24,11 +24,9 @@ git config --global init.defaultBranch main
 git config --global user.name "FIRST_NAME LAST_NAME"
 git config --global user.email "MY_NAME@example.com"
 
-# Extract a file or a folder from a git repository with full git history
-# Create the patch file with all the commits that touch the file or folder.
+# Extract a file or a folder from a git repository with full git history to another repository
 cd ~/repository_path
 git log --pretty=email --patch-with-stat --reverse --full-index --binary -- path/to/file_or_folder > /tmp/patch
-# Apply the commits to the new repository
 cd ~/another_repository_path
 git init
 git am < /tmp/patch
