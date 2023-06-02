@@ -34,9 +34,9 @@ git init
 git am < /tmp/patch
 
 # Delete history
-VAR=$(git config --get remote.origin.url) # store remote in a variable
+VAR=$(git config --get remote.origin.url)
 echo $VAR
-# rm -rf .git/ # delete .git folder
+# rm -rf .git/
 git init
 git remote add origin $VAR
 git add .
