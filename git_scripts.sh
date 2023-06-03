@@ -15,7 +15,7 @@ git remote remove origin
 git add .
 git commit -m "`date +'%Y-%m-%d %H:%M'`"
 git push -u origin main
-read -n 1 -s -r -p "Process is over."
+read -n 1 -s -r -p "Press any key to exit..."
 
 # Change default branch name to main
 git config --global init.defaultBranch main
