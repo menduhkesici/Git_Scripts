@@ -1,9 +1,19 @@
 # Initialize repo
 git init
 
+# Clone remote repo with subrepos
+git clone --recursive {SSH_ADDRESS}
+# or
+git clone {SSH_ADDRESS}
+git submodule init
+git submodule update --recursive
+
+# Update local list of remote branches
+git remote update origin –prune
+
 # Add remote
-# Create PAT with permission: Contents (Read and write)
-git remote add origin https://<user ID>:<fine-grained PAT>@github.com/<owner>/<repo>.git
+# Create Personal Access Token (PAT) with permission: Contents (Read and write)
+git remote add origin https://{USER_ID}:{PAT}@github.com/{OWNER}/{REPO}.git
 
 # Check remote
 git remote -v
